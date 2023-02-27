@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://kit.fontawesome.com/829512fc4b.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/style.css">
+    <title>TO-DO List</title>
+</head>
+
+<body>
+    <header><h1>To-Do List</h1></header>
+    <div class="container">
+        <main>
+            <div class="menu">
+                <input type="text" id="myTitle" maxlength="15">
+                <i class="fa-solid fa-plus icon" id="addNote"></i>
+            </div>
+            <ul id="myList"></ul>
+        </main>
+    </div>
+    <script type="module">
+        import createNote from './public/note.js'
+        import createButtons from './public/buttons.js'
+        
+        const note = createNote()
+        const buttons = createButtons()
+
+        document.getElementById("addNote").onclick = function() {
+            note.addNote(buttons.getButtons()) 
+        }
+        document.querySelector("input").addEventListener("keydown", () => {if(event.key == 'Enter')note.addNote(buttons.getButtons())})
+    </script>
+</body>
+</html>

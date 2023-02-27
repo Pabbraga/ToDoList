@@ -2,46 +2,59 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 header {
-    margin-bottom: 15vh;
+    margin-bottom: 10svh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: clamp(1rem, 0.5vw + 1rem, 1.5rem);
 }
 .container {
-    width: 50%;
-    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+main {
+    display: flex;
+    flex-direction: column;
 }
 .menu {
-    width: fit-content;
-    margin: auto; 
-    margin-bottom: 25px;  
+    margin-bottom: 25px; 
+}
+input[type=text] {
+    font-size: clamp(0.5rem, 0.5vw + 1rem, 1rem);
 }
 ul,li {
     list-style-type: none;    
+    font-size: clamp(0.5rem, 0.5vw + 1rem, 1rem);
 }
 #myList {
     width: fit-content;
-    margin: auto;
 }
 .note {
-    width: 40vh;
-    height: 8vh;
-    margin-bottom: 10px;
-    padding: 5px 5px 5px 10px;
+    height: 10svh;
+    margin-bottom: 1dvh;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
     border-radius: 5px;
-    box-sizing: content-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: lightblue;
+    box-sizing: content-box;
 }
 .icons {
+    width: 5svw;
+    display: flex;
     align-self: center;
+    justify-content: flex-end;
 }
 .icon {
-    margin-right: 10px;
     cursor: pointer;
+    align-self: center;
+    margin-left: 0.5dvw;
 }
